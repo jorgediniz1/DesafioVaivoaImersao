@@ -43,9 +43,7 @@ namespace DesafioVaiVoa.Controllers
 
                 context.Cards.Add(model);
                 await context.SaveChangesAsync();
-                return model;
-                
-
+                return model;  
             }
             else
             {
@@ -61,7 +59,6 @@ namespace DesafioVaiVoa.Controllers
             {
                 var pessoa = await context.Pessoas.Include (x => x.ListCards).ToListAsync();
                 return pessoa;
-
             }
 */
         }
